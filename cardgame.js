@@ -38,7 +38,7 @@ function require(scripts)
 };
 
 //var server = 'http://dnd.5squares.ru/';
-var server = '';
+var server = './';
 
 $('head').append( $('<link>', {'type':'text/css', 'rel':'stylesheet', 'href':server+'common.css'}) );
 $('head').append( $('<link>', {'type':'text/css', 'rel':'stylesheet', 'media':'screen', 'href':server+'mobile.css'}) );
@@ -49,7 +49,8 @@ require([
 	server+'html5.js',
 	server+'classes/functions.js', 
 	server+'interfaces/CardInterface.js', 
-	server+'interfaces/PlayerInterface.js',
+	server + 'interfaces/PlayerInterface.js',
+	server + 'classes/Card.js',
 	server+'classes/Player.js', 
 	server+'classes/Game.js', 
 	//server+'classes/hero.js', 

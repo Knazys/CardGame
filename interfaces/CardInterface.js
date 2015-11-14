@@ -5,7 +5,7 @@
 
 CardInterface = function()
 {
-	// constuctor
+    // constuctor
 }
 
 CardInterface.prototype = 
@@ -90,6 +90,17 @@ CardInterface.prototype =
 		this._onPut();
 		// some code here
 	},
+
+    // карта добавляется в руку
+	addToHand: function () {
+	    this._onAddToHand();
+	    // some code here
+	},
+
+    // игрок положил карту на стол
+	getHtmlFrame: function () {
+	    // some code here
+	},
 	
 	
 	/*
@@ -148,5 +159,10 @@ CardInterface.prototype =
 	_onPut : function()
 	{
 		// some code here
+	},
+
+    // срабатывает, когда карта добавляется в руку
+	_onAddToHand: function () {
+	    // some code here
 	},
 };

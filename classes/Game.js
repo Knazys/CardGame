@@ -10,8 +10,11 @@ Game = function(params)
 	this.me = params.me;
 	this.enemy = params.enemy;
 	
-	this.spawnMe();
-	this.spawnEnemy();
+	this.me.spawn('#my-frame');
+	this.enemy.spawn('#enemy-frame');
+
+	this.me.pullCards(4);
+	this.enemy.pullCards(3);
 }
 //extend(Player,PlayerInterface);
 
@@ -40,25 +43,8 @@ Game.prototype =
 	*/
 	
 	// добавляем инфо об игроке (себе) на экран
-	spawnMe : function()
+	qw2e : function()
 	{
-		var myFrame = $('#my-frame');
-		myFrame.html('<div class="player-title">'+this.me.name+'</div>');
-		// кэшируем объект со здоровьем
-		this.myHealthFrame = $('<div>').addClass('player-health').html(this.me.health);
-		
-		myFrame.append(this.myHealthFrame);
-	},
-	
-	// добавляем инфо об игроке (враге) на экран
-	spawnEnemy : function()
-	{
-		var enemyFrame = $('#enemy-frame');
-		enemyFrame.html('<div class="player-title">'+this.enemy.name+'</div>');
-		// кэшируем объект со здоровьем
-		this.enemyHealthFrame = $('<div>').addClass('player-health').html(this.enemy.health);
-		
-		enemyFrame.append(this.enemyHealthFrame);
 	},
 	
 	

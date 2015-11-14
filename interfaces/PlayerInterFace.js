@@ -28,6 +28,9 @@ PlayerInterface.prototype =
 	
 	// карты на столе
 	cardsOnTable: [],
+
+    // максимальное колчиество карт в руке
+	maxCardsInHand: 8,
 	
 	
 	/*
@@ -48,11 +51,11 @@ PlayerInterface.prototype =
 		// some code here
 	},
 	
-	// игрок берет карту из колоды
-	pullCard : function()
+	// игрок получает карту из колоды
+	pullCards : function()
 	{
-		this._onPullCard();
-		// some code here
+	    this._onPullCard();
+	    // some code here
 	},
 	
 	
